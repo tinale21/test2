@@ -1,0 +1,43 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1.5rem;
+}
+
+.celebration {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #e0e0e0;
+  min-height: 2rem;
+  text-align: center;
+}
+
+.clicker {
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  background: #fff;
+  color: #0a0a0a;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.clicker:hover {
+  background: #f0f0f0;
+}
+
+.clicker:active {
+  transform: scale(0.95);
+}
+
+.count {
+  font-size: 0.9rem;
+  color: #666;
+  letter-spacing: 0.05em;
+}
