@@ -10,7 +10,8 @@ html, body, #root {
 }
 
 body {
-  font-family: sans-serif;
-  background: #0a0a0a;
-  color: #fff;
+  background: #0f1923;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
 }

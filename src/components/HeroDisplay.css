@@ -1,0 +1,37 @@
+.hero-display {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation: hero-enter 0.45s ease-out both;
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-img {
+  height: 90%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  mix-blend-mode: multiply;
+  user-select: none;
+  animation: hero-idle 3.5s ease-in-out infinite;
+  animation-delay: 0.45s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes hero-idle {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}

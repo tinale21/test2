@@ -1,101 +1,72 @@
 import { useState } from 'react'
 import './App.css'
-
-const stages = [
-  {
-    title: "CLOSE THE LAPTOP.",
-    sub: "It will still be here when you get back.",
-    flavor: "The code is not going anywhere. The sun, however, is a limited time offer.",
-  },
-  {
-    title: "YOU'RE STILL HERE.",
-    sub: "We see you.",
-    flavor: "The outside has been calling. It's starting to feel awkward for everyone.",
-  },
-  {
-    title: "THERE ARE PEOPLE OUT THERE.",
-    sub: "Real ones. With faces.",
-    flavor: "They do things like laugh and share food. You used to do those things.",
-  },
-  {
-    title: "THIS IS A QUEST.",
-    sub: "Objective: touch grass.",
-    flavor: "Completion reward: a sense of being a full human person who exists in the world.",
-  },
-  {
-    title: "FINAL WARNING.",
-    sub: "After this it gets weird.",
-    flavor: "The birds have been briefed. They are waiting.",
-  },
-  {
-    title: "okay fine. stay.",
-    sub: "but we're disappointed.",
-    flavor: "...no actually please go. this is getting embarrassing for both of us.",
-  },
-]
+import { characters } from './data/characters'
+import CharacterThumbnail from './components/CharacterThumbnail'
+import HeroDisplay from './components/HeroDisplay'
+import StatsPanel from './components/StatsPanel'
+import GameScreen from './components/GameScreen'
 
 function App() {
-  const [step, setStep] = useState(0)
-  const [accepted, setAccepted] = useState(false)
+  const [selected, setSelected] = useState(null)
+  const [gameStarted, setGameStarted] = useState(false)
 
-  const { title, sub, flavor } = stages[Math.min(step, stages.length - 1)]
-  const atMax = step >= stages.length - 1
-
-  if (accepted) {
+  if (gameStarted) {
     return (
-      <div className="app">
-        <div className="bg-grid" />
-        <Particles />
-        <div className="content accepted-content">
-          <span className="accepted-icon">🌿</span>
-          <h1 className="accepted-title">Quest Accepted.</h1>
-          <p className="accepted-sub">Go. Be a human. We'll be here.</p>
-          <p className="accepted-small">Close the laptop first though.</p>
-        </div>
-      </div>
+      <GameScreen
+        character={selected}
+        onBack={() => setGameStarted(false)}
+      />
     )
   }
 
+  const hasSelection = selected !== null
+
   return (
-    <div className="app">
-      <div className="bg-grid" />
-      <Particles />
-      <div className="content" key={step}>
-        <div className="badge">
-          <span className="badge-dot" />
-          URGENT TRANSMISSION
+    <div className="screen">
+
+      {/* LEFT ZONE */}
+      <div className="zone-left">
+        <button className="btn-nav" onClick={() => setSelected(null)}>
+          ← Back
+        </button>
+
+        <p className="select-label">Select Character</p>
+
+        <div className="thumbnail-grid">
+          {characters.map(char => (
+            <CharacterThumbnail
+              key={char.id}
+              character={char}
+              isSelected={selected?.id === char.id}
+              hasSelection={hasSelection}
+              onSelect={() => setSelected(char)}
+            />
+          ))}
         </div>
-        <h1 className="title">{title}</h1>
-        <p className="sub">{sub}</p>
-        <p className="flavor">{flavor}</p>
-        <div className="actions">
-          <button className="btn-primary" onClick={() => setAccepted(true)}>
-            I ACCEPT THIS QUEST
-          </button>
-          <button
-            className="btn-secondary"
-            onClick={() => setStep(s => s + 1)}
-            disabled={atMax}
-          >
-            {atMax ? 'seriously though.' : 'not yet →'}
-          </button>
-        </div>
-        {step > 0 && (
-          <p className="shame">
-            You have ignored this {step} time{step !== 1 ? 's' : ''}.
-          </p>
+
+        <button
+          className="btn-ready"
+          disabled={!hasSelection}
+          onClick={() => hasSelection && setGameStarted(true)}
+        >
+          Ready
+        </button>
+      </div>
+
+      {/* CENTER ZONE */}
+      <div className="zone-center">
+        {selected && (
+          <HeroDisplay key={selected.id} character={selected} />
         )}
       </div>
-    </div>
-  )
-}
 
-function Particles() {
-  return (
-    <div className="particles" aria-hidden="true">
-      {Array.from({ length: 14 }, (_, i) => (
-        <div className="particle" key={i} style={{ '--i': i }} />
-      ))}
+      {/* RIGHT ZONE */}
+      <div className="zone-right">
+        {selected && (
+          <StatsPanel key={selected.id} character={selected} />
+        )}
+      </div>
+
     </div>
   )
 }
