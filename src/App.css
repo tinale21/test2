@@ -1,7 +1,7 @@
 /* ─── Screen Layout ───────────────────────────────────────────── */
 .screen {
   display: grid;
-  grid-template-columns: 300px 1fr 340px;
+  grid-template-columns: 340px 1fr 460px;
   height: 100%;
   width: 100%;
   padding: 48px;
@@ -16,6 +16,16 @@
   z-index: 10;
 }
 
+.zone-left-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding-left: 56px;
+  padding-bottom: 106px;
+  flex: 1;
+}
+
 .zone-center {
   display: flex;
   align-items: flex-end;
@@ -28,24 +38,36 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 40px;
+  padding-right: 80px;
 }
 
 /* ─── Select label ────────────────────────────────────────────── */
 .select-label {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.85);
-  font-variant: small-caps;
+  text-align: center;
 }
 
 /* ─── Thumbnail grid ──────────────────────────────────────────── */
 .thumbnail-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 110px 110px;
   gap: 10px;
-  flex: 1;
+}
+
+/* ─── Heading aligned to grid width ──────────────────────────── */
+.zone-left-inner .select-label {
+  width: 230px;
+}
+
+/* ─── Ready button spacing and size ──────────────────────────── */
+.zone-left-inner .btn-ready {
+  width: 280px;
+  height: 43px;
+  margin-left: calc((230px - 280px) / 2);
+  margin-top: 18px;
 }
 
 /* ─── Buttons ─────────────────────────────────────────────────── */

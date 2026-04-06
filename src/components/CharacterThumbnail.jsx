@@ -3,20 +3,12 @@ import './CharacterThumbnail.css'
 
 function CharacterThumbnail({ character, isSelected, hasSelection, onSelect }) {
   const [hovered, setHovered] = useState(false)
-
-  let opacity
-  if (!hasSelection || isSelected) {
-    opacity = 1
-  } else if (hovered) {
-    opacity = 0.72
-  } else {
-    opacity = 0.5
-  }
+  const dimmed = hasSelection && !isSelected
+  const imgOpacity = dimmed ? (hovered ? 0.6 : 0.5) : 1
 
   return (
     <div
-      className={`thumbnail ${isSelected ? 'selected' : ''}`}
-      style={{ opacity }}
+      className={`thumbnail${isSelected ? ' selected' : ''}${dimmed ? ' dimmed' : ''}`}
       onClick={onSelect}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -25,6 +17,7 @@ function CharacterThumbnail({ character, isSelected, hasSelection, onSelect }) {
         src={character.image}
         alt={character.name}
         className="thumbnail-img"
+        style={{ opacity: imgOpacity }}
         draggable={false}
       />
     </div>

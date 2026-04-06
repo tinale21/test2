@@ -1,7 +1,9 @@
 .stats-panel {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  align-items: center;
+  gap: 78px;
+  width: 100%;
   animation: panel-enter 0.45s ease-out both;
 }
 
@@ -20,11 +22,36 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.char-emblem {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto -16px;
+}
+
+.char-emblem--kevin {
+  margin-bottom: -12px;
+}
+
+.char-emblem--rae,
+.char-emblem--hanna {
+  margin-bottom: -20px;
+}
+
+.char-emblem--daniel {
+  width: 216px;
+  height: 216px;
+  margin-bottom: -8px;
 }
 
 .char-name {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: 60px;
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -40,5 +67,6 @@
 .stats-list {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 44px;
+  width: 100%;
 }

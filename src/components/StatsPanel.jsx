@@ -13,6 +13,9 @@ function StatsPanel({ character }) {
   return (
     <div className="stats-panel">
       <div className="char-identity">
+        {character.emblem && (
+          <img className={`char-emblem char-emblem--${character.id}`} src={character.emblem} alt="" />
+        )}
         <h1 className="char-name">{character.name.toUpperCase()}</h1>
         <p className="char-title">{character.title.toUpperCase()}</p>
       </div>

@@ -3,22 +3,36 @@
   cursor: pointer;
   overflow: hidden;
   background: #162030;
-  transition: opacity 225ms ease-out, border-color 225ms ease-out;
-  aspect-ratio: 4 / 5;
+  width: 110px;
+  height: 135px;
+  padding: 12px 12px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:
+    border-color 225ms ease-out,
+    box-shadow 225ms ease-out;
 }
 
+/* ─── Selected ────────────────────────────────────────────── */
 .thumbnail.selected {
   border-color: rgba(255, 255, 255, 0.65);
 }
 
+/* ─── Hover — all boxes ───────────────────────────────────── */
+.thumbnail:hover {
+  border-color: rgba(111, 168, 255, 0.6);
+  box-shadow:
+    0 0 10px rgba(111, 168, 255, 0.45),
+    0 0 20px rgba(111, 168, 255, 0.2);
+}
+
+/* ─── Image ───────────────────────────────────────────────── */
 .thumbnail-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  mix-blend-mode: multiply;
+  object-position: top center;
   user-select: none;
+  transition: opacity 225ms ease-out;
 }

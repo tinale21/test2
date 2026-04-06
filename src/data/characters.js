@@ -6,6 +6,7 @@ export const characters = [
     name: 'Kevin',
     title: 'The Thinker',
     image: `${BASE}characters/kevin.png`,
+    emblem: `${BASE}emblems/kevin.png`,
     stats: { speed: 65, knowledge: 75, curiosity: 45 },
   },
   {
@@ -13,6 +14,7 @@ export const characters = [
     name: 'Hanna',
     title: 'The Risk-Taker',
     image: `${BASE}characters/hanna.png`,
+    emblem: `${BASE}emblems/hanna.png`,
     stats: { speed: 65, knowledge: 75, curiosity: 50 },
   },
   {
@@ -20,6 +22,7 @@ export const characters = [
     name: 'Rae',
     title: 'The Brains',
     image: `${BASE}characters/rae.png`,
+    emblem: `${BASE}emblems/rae.png`,
     stats: { speed: 70, knowledge: 90, curiosity: 55 },
   },
   {
@@ -27,6 +30,7 @@ export const characters = [
     name: 'Daniel',
     title: 'The Explorer',
     image: `${BASE}characters/daniel.png`,
+    emblem: `${BASE}emblems/daniel.png`,
     stats: { speed: 65, knowledge: 80, curiosity: 100 },
   },
 ]

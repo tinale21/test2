@@ -30,27 +30,30 @@ function App() {
           ← Back
         </button>
 
-        <p className="select-label">Select Character</p>
+        <div className="zone-left-inner">
+          <p className="select-label">Select Character</p>
 
-        <div className="thumbnail-grid">
-          {characters.map(char => (
-            <CharacterThumbnail
-              key={char.id}
-              character={char}
-              isSelected={selected?.id === char.id}
-              hasSelection={hasSelection}
-              onSelect={() => setSelected(char)}
-            />
-          ))}
+          <div className="thumbnail-grid">
+            {characters.map(char => (
+              <CharacterThumbnail
+                key={char.id}
+                character={char}
+                isSelected={selected?.id === char.id}
+                hasSelection={hasSelection}
+                onSelect={() => setSelected(char)}
+              />
+            ))}
+          </div>
+
+          {hasSelection && (
+            <button
+              className="btn-ready"
+              onClick={() => setGameStarted(true)}
+            >
+              Ready
+            </button>
+          )}
         </div>
-
-        <button
-          className="btn-ready"
-          disabled={!hasSelection}
-          onClick={() => hasSelection && setGameStarted(true)}
-        >
-          Ready
-        </button>
       </div>
 
       {/* CENTER ZONE */}
