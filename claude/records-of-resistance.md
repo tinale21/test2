@@ -20,3 +20,17 @@
 - What AI produced: Boosted the vertical spotlight column opacity from 0.28 to 0.55 and the floor glow from 0.35 to 0.60 in response to "increase the glow."
 - Why rejected: The increased glow overpowered the interface and competed with the UI elements.
 - What I did instead: Reverted to the original lower-opacity values.
+
+---
+
+**4. Stat bar height misinterpreted as length**
+- What AI produced: Changed the stat bar `height` from 12px to 8px when prompted to "decrease each stat bar by 4pt," interpreting "decrease" as referring to the bar's thickness.
+- Why rejected: The intent was to shorten the horizontal length of the bar, not reduce its height. Height was correct at 12px.
+- What I did instead: Reverted the height back to 12px and reduced the track `width` from `calc(100% - 24px)` to `calc(100% - 28px)` instead.
+
+---
+
+**5. Hero character scale overcorrection (90% → 70%)**
+- What AI produced: Reduced the hero image height from 90% to 70% when asked to "decrease the scale by 0.2x," treating the reduction as a flat 20-percentage-point drop.
+- Why rejected: The jump was too aggressive — the character appeared too small on screen and required multiple scale-up corrections (70% → 80% → 75%) to land at the right size.
+- What I did instead: Incrementally scaled back up in 0.1x steps until the character felt right at 75% height.
