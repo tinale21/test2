@@ -63,7 +63,7 @@ See [`claude/records-of-resistance.md`](claude/records-of-resistance.md)
 
 ## Five Questions Reflection
 
-*To be completed before submission.*
+This project reflects my creative direction because each major design decision was prompted by me and included my intent for the functionality and visual direction of the screen flow. I used AI as a tool for refinement and execution rather than letting it make the decisions for me. I checked that things work by constantly testing that all interactions, spacing, alignment, etc. matched what I intended after each prompt. I do have a solid understanding of the process of vibe coding now that I have gone through the process and experience the trail and errors. My documentation is honest because it reflects my exact prompts, what AI prompted, and the adjustments I made to achieve my own vision.
 
 ---
 
