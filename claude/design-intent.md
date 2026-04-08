@@ -3,6 +3,27 @@
 
 ---
 
+## Original Screen Flows
+
+These are the five reference screens submitted before AI engagement. They served as the visual source of truth for the entire prototype.
+
+**Default State — No Selection**
+![Default Screen](screens/screen-default.png)
+
+**Kevin Selected**
+![Kevin Screen](screens/screen-kevin.png)
+
+**Rae Selected**
+![Rae Screen](screens/screen-rae.png)
+
+**Hanna Selected**
+![Hanna Screen](screens/screen-hanna.png)
+
+**Daniel Selected**
+![Daniel Screen](screens/screen-daniel.png)
+
+---
+
 ## Purpose
 
 This is an interactive animated prototype for an already-designed character select screen. The screens, layout, visual styling, and character art are already created. The purpose of this prototype is to make those static screens feel functional through motion, interactivity, and state changes. This is not a redesign task. The AI should treat the existing screens as the visual source of truth and focus on building the animations and prototype logic around them.
