@@ -19,10 +19,32 @@
 
 ```mermaid
 flowchart TD
-    A[User hovers over faction] --> B[App detects hover event]
-    B --> C[Active faction expands]
-    B --> D[Inactive factions dim]
-    C --> E[Typography shifts / atmosphere reacts]
+    A[App Loads] --> B[Character Select Screen]
+
+    B --> C[UtilityBar — fixed top-right]
+    B --> D[Disclaimer — fixed bottom-left]
+    B --> E[Background — default bg.png]
+    B --> F[Left Zone]
+
+    F --> F1[Back Button]
+    F --> F2[Select Character Label]
+    F --> F3[2x2 Character Grid]
+
+    F3 -->|User selects character| G[Character Selected State]
+
+    G --> H[Background crossfades to character bg]
+    G --> I[Fog layer appears]
+    G --> J[HeroDisplay — center zone]
+    G --> K[StatsPanel — right zone]
+    G --> L[Ready Button appears]
+
+    K --> K1[Character Emblem]
+    K --> K2[Character Name]
+    K --> K3[Character Title]
+    K --> K4[Stat Bars — Speed / Knowledge / Curiosity]
+
+    L -->|User clicks Ready| M[GameScreen]
+    F1 -->|User clicks Back| N[Deselect — return to default state]
 ```
 
 ---
