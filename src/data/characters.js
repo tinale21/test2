@@ -31,6 +31,6 @@ export const characters = [
     title: 'The Explorer',
     image: `${BASE}characters/daniel.png`,
     emblem: `${BASE}emblems/daniel.png`,
-    stats: { speed: 65, knowledge: 80, curiosity: 100 },
+    stats: { speed: 65, knowledge: 80, curiosity: 90 },
   },
 ]

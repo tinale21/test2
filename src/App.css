@@ -24,6 +24,7 @@
   padding-left: 56px;
   padding-bottom: 106px;
   flex: 1;
+  transform: translate(15px, 5px);
 }
 
 .zone-center {

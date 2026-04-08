@@ -11,7 +11,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  filter: brightness(0.32) saturate(0.45) contrast(0.85);
+  filter: brightness(0.32) saturate(0.50) contrast(0.85);
   opacity: 0;
   transition: opacity 600ms ease-in-out;
 }

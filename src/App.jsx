@@ -8,6 +8,7 @@ import GameScreen from './components/GameScreen'
 import Background from './components/Background'
 import Fog from './components/Fog'
 import UtilityBar from './components/UtilityBar'
+import Disclaimer from './components/Disclaimer'
 
 function App() {
   const [selected, setSelected] = useState(null)
@@ -29,6 +30,7 @@ function App() {
       <Background characterId={selected?.id ?? null} />
       {selected && <Fog />}
       <UtilityBar />
+      <Disclaimer />
 
       {/* LEFT ZONE */}
       <div className="zone-left">

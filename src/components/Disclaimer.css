@@ -1,0 +1,36 @@
+.disclaimer {
+  position: fixed;
+  bottom: 48px;
+  left: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 420px;
+  z-index: 10;
+  transition: opacity 500ms ease-in-out;
+}
+
+.disclaimer--visible {
+  opacity: 1;
+}
+
+.disclaimer--hidden {
+  opacity: 0;
+}
+
+.disclaimer-label {
+  font-family: 'Fauna One', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+}
+
+.disclaimer-body {
+  font-family: 'Fauna One', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.38);
+  line-height: 1.5;
+  white-space: nowrap;
+}
