@@ -9,7 +9,7 @@
 
 ## Design Intent
 
-*To be completed before AI engagement — Session 2 (3/25/26)*
+See [`claude/design-intent.md`](claude/design-intent.md)
 
 ---
 
