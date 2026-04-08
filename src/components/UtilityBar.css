@@ -1,0 +1,55 @@
+.utility-bar {
+  position: fixed;
+  top: 48px;
+  right: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+.utility-currency {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0E0F14;
+  border: 2px solid #959499;
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.utility-amount {
+  font-family: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.utility-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  transition: color 200ms ease-out;
+}
+
+.utility-btn .utility-icon {
+  width: auto;
+  height: 100%;
+}
+
+.utility-btn:hover {
+  color: #ffffff;
+}
+
+.utility-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}

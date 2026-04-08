@@ -5,6 +5,9 @@ import CharacterThumbnail from './components/CharacterThumbnail'
 import HeroDisplay from './components/HeroDisplay'
 import StatsPanel from './components/StatsPanel'
 import GameScreen from './components/GameScreen'
+import Background from './components/Background'
+import Fog from './components/Fog'
+import UtilityBar from './components/UtilityBar'
 
 function App() {
   const [selected, setSelected] = useState(null)
@@ -23,6 +26,9 @@ function App() {
 
   return (
     <div className="screen">
+      <Background characterId={selected?.id ?? null} />
+      {selected && <Fog />}
+      <UtilityBar />
 
       {/* LEFT ZONE */}
       <div className="zone-left">
