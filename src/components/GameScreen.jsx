@@ -1,8 +1,10 @@
+import Background from './Background'
 import './GameScreen.css'
 
 function GameScreen({ character, onBack }) {
   return (
     <div className="game-screen">
+      <Background characterId={character.id} />
       <button className="btn-nav" onClick={onBack}>← Back</button>
       <div className="game-content">
         <img
@@ -15,7 +17,7 @@ function GameScreen({ character, onBack }) {
           <p className="game-eyebrow">Playing as</p>
           <h1 className="game-name">{character.name.toUpperCase()}</h1>
           <p className="game-title">{character.title.toUpperCase()}</p>
-          <p className="game-message">Adventure begins.</p>
+          <button className="game-message">Let the Adventure Begin →</button>
         </div>
       </div>
     </div>
