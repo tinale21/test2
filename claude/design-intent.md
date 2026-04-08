@@ -5,7 +5,7 @@
 
 ## Original Screen Flows
 
-These are the five reference screens submitted before AI engagement. They served as the visual source of truth for the entire prototype.
+These are the five reference screens submitted before AI engagement. They served as the visual source of truth for the entire prototype. The screens were designed in Figma prior to any AI or code engagement.
 
 **Default State — No Selection**
 ![Default Screen](screens/screen-default.png)
